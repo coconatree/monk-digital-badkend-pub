@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Monk Digital Contact Email</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style></style>
+</head>
+<body>
+    <div>
+        <p>
+            A <span th:text = "${notificationType}"></span> has been made by
+            <span th:text = "${ip}"></span> from <span th:text = "${location}"></span> at
+            <span th:text = "${datetime}"></span>.
+        </p>
+        <div th:if = "${notifiationType = 'contact'}">
+            <p>
+                Email: <span th:text = "${email}}"></span>
+                <br></br>
+                Message:
+                <br></br>
+                <span th:text = "${notificationMessage}"></span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
